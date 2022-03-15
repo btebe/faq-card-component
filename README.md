@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Frontend Mentor - FAQ accordion card solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [FAQ accordion card challenge on Frontend Mentor]
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the component depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Hide/Show the answer to a question when the question is clicked
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![desktop version](./screenshot/faq-desktop.png)
+![mobile version](./screenshot/faq-mobile.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My Process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Normal HTML5 markup
+- CSS custom properties
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+- Media queries
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- In CSS:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* I learnt that i could use svg in as a backgraound image rather than an absolute element.
+* also i can insert n number of svg in one background-image property
 
-## Learn More
+- In Javascript:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* I could use [(prev) => !prev] to reference the prev value and negate it to be set to a new value.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To see how you can add code snippets, see below:
 
-### Code Splitting
+```css
+.card-con {
+  background-image: url("/src/images/bg-pattern-desktop.svg"),
+    url("/src/images/wd.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left -340px top -100px, left -70px center;
+  background-size: 700px, 415px;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```js
+const togler = () => {
+  setToggle((prev) => !prev);
+};
+```
 
-### Analyzing the Bundle Size
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This may seem like a beginner's concern, i have doubts in setting a div to be the size of a whole page or window. The way i go about this is to set the main div to abosulte with height and width of 100vh and 100vw and set the inner div to position relative. which i found was incorrect to set a fixed size. so i searched and found that i have to set the body element to min-height:100vh and width to 100% and set main div to width and height of 100%. As a result, the body element became the size of the window size but the main div did not. you could see example of this in my css code. I would really appreciate if anyone can explain this to me. Also what could be a good practice go about this. Thanks:)
 
-### Making a Progressive Web App
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Example resource 1](https://www.w3schools.com/howto/howto_js_accordion.asp) - This helped me to create an accordian from scratch
+- I use Figma to help create shadow-box on certain elements
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Basma Tebe](https://www.your-site.com)
+- Frontend Mentor - [@btebe](https://www.frontendmentor.io/profile/btebe)
