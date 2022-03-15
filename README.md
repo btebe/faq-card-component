@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/btebe/faq-card-component/tree/main/src]
 - Live Site URL: [https://btebe.github.io/faq-card-component/]
 
 ## My Process
